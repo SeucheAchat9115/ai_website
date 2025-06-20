@@ -1,2 +1,24 @@
+name: Deploy to GitHub Pages
 
-
+on:
+  push:
+    branches:
+      - main  # or 'master', depending on your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v4
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'  # or './dist' if using a build step
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
