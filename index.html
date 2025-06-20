@@ -1,2 +1,80 @@
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Mobile Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background-color: #6200ea;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #eee;
+      padding: 0.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #6200ea;
+      font-weight: bold;
+    }
+    main {
+      padding: 1rem;
+      text-align: center;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .dark {
+      background-color: #121212;
+      color: #eee;
+    }
+    .dark nav {
+      background-color: #222;
+    }
+    .dark nav a {
+      color: #bb86fc;
+    }
+    .dark header {
+      background-color: #3700b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Site</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <main>
+    <p>This is a simple, mobile-friendly website. You can run it right on your phone!</p>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </main>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
